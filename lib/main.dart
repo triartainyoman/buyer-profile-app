@@ -1,4 +1,6 @@
+import 'package:buyer_profile_app/screens/forgot_password_screen.dart';
 import 'package:buyer_profile_app/screens/login_screen.dart';
+import 'package:buyer_profile_app/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Furniture App',
       theme: ThemeData(),
-      home: LoginScreen(),
+      initialRoute: LoginScreen.id,
+      routes: {
+        LoginScreen.id: (context) => LoginScreen(),
+        SignUpScreen.id: (context) => SignUpScreen(),
+        ForgotPasswordScreen.id: (context) => ForgotPasswordScreen(),
+      },
     );
   }
 }

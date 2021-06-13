@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class InputField extends StatelessWidget {
-  InputField({@required this.obscureText});
+  InputField({@required this.obscureText, this.inputType});
   final bool obscureText;
+  final TextInputType inputType;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class InputField extends StatelessWidget {
         borderRadius: BorderRadius.circular(6.0),
       ),
       child: TextFormField(
-        keyboardType: TextInputType.text,
+        keyboardType: inputType,
         obscureText: obscureText,
         decoration: InputDecoration(
           border: InputBorder.none,
