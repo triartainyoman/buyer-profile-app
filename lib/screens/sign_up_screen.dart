@@ -1,3 +1,4 @@
+import 'package:buyer_profile_app/widgets/profile_widget.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'package:buyer_profile_app/constants.dart';
@@ -29,12 +30,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
       items: genderList
           .map(
             (gender) => DropdownMenuItem(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                child: Text(
-                  gender,
-                  style: kInputTextStyle,
-                ),
+              child: Text(
+                gender,
+                style: kInputTextStyle,
               ),
               value: gender,
             ),
@@ -63,6 +61,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Text("Hello!", style: kTitleTextStyle),
                 Text("Sign Up to", style: kTitleTextStyle),
                 Text("get started", style: kTitleTextStyle),
+                SizedBox(height: 76.0),
+                // Avatar
+                ProfileWidget(
+                  imagePath: 'https://www.w3schools.com/howto/img_avatar.png',
+                  onClicked: () {},
+                ),
                 SizedBox(height: 46.0),
                 Text("Name", style: kLabelTextStyle),
                 SizedBox(height: 11),
@@ -75,6 +79,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Text("Gender", style: kLabelTextStyle),
                 SizedBox(height: 11),
                 Container(
+                  padding: EdgeInsets.symmetric(horizontal: 18.0),
                   width: double.infinity,
                   height: 45.0,
                   decoration: BoxDecoration(
