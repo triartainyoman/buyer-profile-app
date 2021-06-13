@@ -5,7 +5,7 @@ const kSecondaryColor = Color(0xFFF5F5F8);
 
 const kTitleTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
-  fontSize: 32.0,
+  fontSize: 35.0,
   fontFamily: 'Montserrat',
 );
 
@@ -17,5 +17,11 @@ const kLabelTextStyle = TextStyle(
 
 const kInputTextStyle = TextStyle(
   fontSize: 16.0,
+  fontFamily: 'Montserrat',
+);
+
+const kMenuTextStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 24.0,
   fontFamily: 'Montserrat',
 );
