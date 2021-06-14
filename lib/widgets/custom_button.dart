@@ -3,17 +3,16 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class CustomButton extends StatelessWidget {
-  CustomButton({@required this.text});
+  CustomButton({@required this.text, @required this.onTap});
 
   final String text;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       // Belum ditambahkan ontap nya
-      onTap: () {
-        print("Berhasil");
-      },
+      onTap: onTap,
       child: Container(
         height: 45.0,
         decoration: BoxDecoration(

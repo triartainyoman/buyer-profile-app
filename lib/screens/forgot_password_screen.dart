@@ -2,7 +2,6 @@ import 'package:buyer_profile_app/widgets/reusable_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:buyer_profile_app/constants.dart';
 import 'package:buyer_profile_app/widgets/custom_button.dart';
-import 'package:buyer_profile_app/widgets/custom_text_button.dart';
 import 'package:buyer_profile_app/widgets/input_field.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
@@ -64,6 +63,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     SizedBox(height: 37.0),
                     CustomButton(
                       text: "Send Intructions",
+                      onTap: () {
+                        print("Berhasil");
+                      },
                     ),
                   ],
                 ),

@@ -1,5 +1,10 @@
+import 'package:buyer_profile_app/screens/cart_screen.dart';
 import 'package:buyer_profile_app/screens/forgot_password_screen.dart';
+import 'package:buyer_profile_app/screens/home_screen.dart';
 import 'package:buyer_profile_app/screens/login_screen.dart';
+import 'package:buyer_profile_app/screens/nav.dart';
+import 'package:buyer_profile_app/screens/profile_screen.dart';
+import 'package:buyer_profile_app/screens/search_screen.dart';
 import 'package:buyer_profile_app/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +23,11 @@ class MyApp extends StatelessWidget {
         LoginScreen.id: (context) => LoginScreen(),
         SignUpScreen.id: (context) => SignUpScreen(),
         ForgotPasswordScreen.id: (context) => ForgotPasswordScreen(),
+        Nav.id: (context) => Nav(),
+        HomeScreen.id: (context) => HomeScreen(),
+        SearchScreen.id: (context) => SearchScreen(),
+        CartScreen.id: (context) => CartScreen(),
+        ProfileScreen.id: (context) => ProfileScreen(),
       },
     );
   }

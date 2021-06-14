@@ -2,10 +2,17 @@ import 'package:buyer_profile_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class ProfileWidget extends StatelessWidget {
-  ProfileWidget({@required this.imagePath, @required this.onClicked});
+  ProfileWidget({
+    @required this.imagePath,
+    @required this.onClicked,
+    @required this.height,
+    @required this.width,
+  });
 
   final String imagePath;
   final VoidCallback onClicked;
+  final double height;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +51,8 @@ class ProfileWidget extends StatelessWidget {
         child: Ink.image(
           image: image,
           fit: BoxFit.cover,
-          width: 100.0,
-          height: 100.0,
+          width: width,
+          height: height,
         ),
       ),
     );

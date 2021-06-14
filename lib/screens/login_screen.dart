@@ -5,6 +5,7 @@ import 'package:buyer_profile_app/constants.dart';
 import 'package:buyer_profile_app/widgets/custom_button.dart';
 import 'package:buyer_profile_app/widgets/custom_text_button.dart';
 import 'package:buyer_profile_app/widgets/input_field.dart';
+import 'nav.dart';
 
 class LoginScreen extends StatefulWidget {
   static String id = "login_screen";
@@ -39,6 +40,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: 37.0),
                 CustomButton(
                   text: "Login",
+                  onTap: () {
+                    Navigator.pushNamed(context, Nav.id);
+                  },
                 ),
                 SizedBox(height: 37.0),
                 Row(

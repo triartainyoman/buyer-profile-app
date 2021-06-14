@@ -66,6 +66,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ProfileWidget(
                   imagePath: 'https://www.w3schools.com/howto/img_avatar.png',
                   onClicked: () {},
+                  width: 100.0,
+                  height: 100.0,
                 ),
                 SizedBox(height: 46.0),
                 Text("Name", style: kLabelTextStyle),
@@ -110,6 +112,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 SizedBox(height: 37.0),
                 CustomButton(
                   text: "Sign Up",
+                  onTap: () {
+                    print("Berhasil");
+                  },
                 ),
                 SizedBox(height: 37.0),
                 Row(
