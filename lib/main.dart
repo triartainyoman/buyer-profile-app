@@ -1,4 +1,5 @@
 import 'package:buyer_profile_app/screens/cart_screen.dart';
+import 'package:buyer_profile_app/screens/change_password_screen.dart';
 import 'package:buyer_profile_app/screens/edit_profile_screen.dart';
 import 'package:buyer_profile_app/screens/forgot_password_screen.dart';
 import 'package:buyer_profile_app/screens/home_screen.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         SearchScreen.id: (context) => SearchScreen(),
         CartScreen.id: (context) => CartScreen(),
         ProfileScreen.id: (context) => ProfileScreen(),
+        ChangePasswordScreen.id: (context) => ChangePasswordScreen()
         EditProfileScreen.id: (context) => EditProfileScreen(),
       },
     );

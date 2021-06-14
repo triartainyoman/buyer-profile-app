@@ -1,3 +1,5 @@
+import 'package:buyer_profile_app/screens/change_password_screen.dart';
+import 'package:buyer_profile_app/screens/login_screen.dart';
 import 'package:buyer_profile_app/screens/edit_profile_screen.dart';
 import 'package:buyer_profile_app/widgets/custom_button.dart';
 import 'package:buyer_profile_app/widgets/custom_list_tile.dart';
@@ -75,11 +77,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 CustomListTile(
                   image: 'assets/icons/icon_lock.png',
                   text: "Change Password",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, ChangePasswordScreen.id);
+                  },
                 ),
                 SizedBox(height: 58.0),
                 CustomButton(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, LoginScreen.id);
+                  },
                   text: 'Sign Out',
                 ),
                 SizedBox(height: 61.0),
