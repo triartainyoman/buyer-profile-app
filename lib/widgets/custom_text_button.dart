@@ -1,4 +1,3 @@
-import 'package:buyer_profile_app/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextButton extends StatelessWidget {

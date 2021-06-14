@@ -33,3 +33,14 @@ const kMenuTextStyle = TextStyle(
   fontSize: 24.0,
   fontFamily: 'Montserrat',
 );
+
+const kCardTextStyle = TextStyle(
+  fontSize: 12.0,
+  fontFamily: 'Montserrat',
+  fontWeight: FontWeight.bold,
+);
+
+const kCardLabelTextStyle = TextStyle(
+  fontSize: 11.0,
+  fontFamily: 'Montserrat',
+);

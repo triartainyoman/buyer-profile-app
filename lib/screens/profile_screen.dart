@@ -4,6 +4,7 @@ import 'package:buyer_profile_app/screens/edit_profile_screen.dart';
 import 'package:buyer_profile_app/widgets/custom_button.dart';
 import 'package:buyer_profile_app/widgets/custom_list_tile.dart';
 import 'package:buyer_profile_app/widgets/profile_widget.dart';
+import 'package:buyer_profile_app/screens/notification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:buyer_profile_app/constants.dart';
 
@@ -65,7 +66,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 CustomListTile(
                   image: 'assets/icons/icon_notification.png',
                   text: "Notification",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, NotificationScreen.id);
+                  },
                 ),
                 SizedBox(height: 27.0),
                 CustomListTile(

@@ -43,7 +43,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,61 +50,57 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40.0),
-            child: Column(
-              children: [
-                SizedBox(height: 61.0),
-                Stack(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Container(
-                          child: Text(
-                            "Edit Profile",
-                            style: kMenuTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ],
-                    ),
-                    ReusableBackButton(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                  ],
-                ),
-                SizedBox(height: 17.0,),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                  child: Column(
+            child: Column(children: [
+              SizedBox(height: 61.0),
+              Stack(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Text(
-                        "Change the field bellow and  using the save button to update your profile",
-                        style: kSubtitleTextStyle,
-                        textAlign: TextAlign.center,
-                      )
+                      Container(
+                        child: Text(
+                          "Edit Profile",
+                          style: kMenuTextStyle,
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
                     ],
                   ),
+                  ReusableBackButton(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 17.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: Column(
+                  children: [
+                    Text(
+                      "Change the field bellow and  using the save button to update your profile",
+                      style: kSubtitleTextStyle,
+                      textAlign: TextAlign.center,
+                    )
+                  ],
                 ),
-                SizedBox(height: 66.0),
-                Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-
+              ),
+              SizedBox(height: 66.0),
+              Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                     Text("Name", style: kLabelTextStyle),
                     SizedBox(height: 11.0),
                     InputField(obscureText: false),
-
                     SizedBox(height: 36.0),
-
                     Text("Username", style: kLabelTextStyle),
                     SizedBox(height: 11.0),
                     InputField(obscureText: false),
-
                     SizedBox(height: 36.0),
-
                     Text("Gender", style: kLabelTextStyle),
                     SizedBox(height: 11.0),
                     Container(
@@ -118,35 +113,30 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       ),
                       child: genderDropdown(),
                     ),
-
                     SizedBox(height: 36.0),
-
                     Text("Phone Number", style: kLabelTextStyle),
                     SizedBox(height: 11.0),
-                    InputField(obscureText: false),
-
+                    InputField(
+                      obscureText: false,
+                      inputType: TextInputType.number,
+                    ),
                     SizedBox(height: 36.0),
-
                     Text("Email", style: kLabelTextStyle),
                     SizedBox(height: 11.0),
                     InputField(obscureText: false),
-
-                    SizedBox(height: 66.0,),
-
-                    CustomButton(
-                      text: "Save Changes", 
-                      onTap: () {
-                        Navigator.pop(context);
-                      }
+                    SizedBox(
+                      height: 66.0,
                     ),
-
+                    CustomButton(
+                        text: "Save Changes",
+                        onTap: () {
+                          Navigator.pop(context);
+                        }),
                     SizedBox(height: 48.0),
-
-                    ],
-                  ),
-                )
-              ]
-            ),
+                  ],
+                ),
+              )
+            ]),
           ),
         ),
       ),

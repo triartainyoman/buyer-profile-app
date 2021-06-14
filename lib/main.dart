@@ -5,6 +5,7 @@ import 'package:buyer_profile_app/screens/forgot_password_screen.dart';
 import 'package:buyer_profile_app/screens/home_screen.dart';
 import 'package:buyer_profile_app/screens/login_screen.dart';
 import 'package:buyer_profile_app/screens/nav.dart';
+import 'package:buyer_profile_app/screens/notification_screen.dart';
 import 'package:buyer_profile_app/screens/profile_screen.dart';
 import 'package:buyer_profile_app/screens/search_screen.dart';
 import 'package:buyer_profile_app/screens/sign_up_screen.dart';
@@ -30,8 +31,9 @@ class MyApp extends StatelessWidget {
         SearchScreen.id: (context) => SearchScreen(),
         CartScreen.id: (context) => CartScreen(),
         ProfileScreen.id: (context) => ProfileScreen(),
-        ChangePasswordScreen.id: (context) => ChangePasswordScreen()
+        ChangePasswordScreen.id: (context) => ChangePasswordScreen(),
         EditProfileScreen.id: (context) => EditProfileScreen(),
+        NotificationScreen.id: (context) => NotificationScreen(),
       },
     );
   }
