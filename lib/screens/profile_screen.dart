@@ -1,5 +1,6 @@
 import 'package:buyer_profile_app/screens/change_password_screen.dart';
 import 'package:buyer_profile_app/screens/login_screen.dart';
+import 'package:buyer_profile_app/screens/edit_profile_screen.dart';
 import 'package:buyer_profile_app/widgets/custom_button.dart';
 import 'package:buyer_profile_app/widgets/custom_list_tile.dart';
 import 'package:buyer_profile_app/widgets/profile_widget.dart';
@@ -56,7 +57,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 CustomListTile(
                   image: 'assets/icons/icon_edit_profile.png',
                   text: "Edit Profile",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, EditProfileScreen.id);
+                  },
                 ),
                 SizedBox(height: 27.0),
                 CustomListTile(
