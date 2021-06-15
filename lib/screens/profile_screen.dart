@@ -2,6 +2,7 @@ import 'package:buyer_profile_app/screens/change_password_screen.dart';
 import 'package:buyer_profile_app/screens/change_profile_image_screen.dart';
 import 'package:buyer_profile_app/screens/login_screen.dart';
 import 'package:buyer_profile_app/screens/edit_profile_screen.dart';
+import 'package:buyer_profile_app/screens/shipping_address_screen.dart';
 import 'package:buyer_profile_app/widgets/custom_button.dart';
 import 'package:buyer_profile_app/widgets/custom_list_tile.dart';
 import 'package:buyer_profile_app/widgets/profile_widget.dart';
@@ -77,7 +78,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 CustomListTile(
                   image: 'assets/icons/icon_address.png',
                   text: "Shipping Address",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, ShippingAddressScreen.id);
+                  },
                 ),
                 SizedBox(height: 27.0),
                 CustomListTile(

@@ -8,7 +8,8 @@ class ChangeProfileImageScreen extends StatefulWidget {
   static String id = "changeprofileimage_screen";
 
   @override
-  _ChangeProfileImageScreenState createState() => _ChangeProfileImageScreenState();
+  _ChangeProfileImageScreenState createState() =>
+      _ChangeProfileImageScreenState();
 }
 
 class _ChangeProfileImageScreenState extends State<ChangeProfileImageScreen> {
@@ -38,12 +39,11 @@ class _ChangeProfileImageScreenState extends State<ChangeProfileImageScreen> {
                               ),
                             ),
                             Container(
-                              child: Text(
-                                "Profile Image",
-                                style: kMenuTextStyle,
-                                textAlign: TextAlign.center,
-                              )
-                            )
+                                child: Text(
+                              "Profile Image",
+                              style: kMenuTextStyle,
+                              textAlign: TextAlign.center,
+                            ))
                           ],
                         ),
                       ],
@@ -55,11 +55,13 @@ class _ChangeProfileImageScreenState extends State<ChangeProfileImageScreen> {
                     ),
                   ],
                 ),
-                SizedBox(height: 17.0,),
+                SizedBox(
+                  height: 17.0,
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24.0),
                   child: Column(
-                     crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Enter your new profile image link down below",
@@ -74,8 +76,7 @@ class _ChangeProfileImageScreenState extends State<ChangeProfileImageScreen> {
                   "Profile Image Link",
                   style: kLabelTextStyle,
                 ),
-
-                SizedBox(height:12.0),
+                SizedBox(height: 12.0),
                 Container(
                   height: 150.0,
                   decoration: BoxDecoration(
@@ -83,19 +84,26 @@ class _ChangeProfileImageScreenState extends State<ChangeProfileImageScreen> {
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.all(20.0),
+                      border: InputBorder.none,
+                    ),
                     maxLines: 8,
                     style: kInputTextStyle,
                   ),
                 ),
-
-                SizedBox(height:60.0),
+                SizedBox(height: 60.0),
                 CustomButton(
-                        text: "Change Profile Image", 
-                        onTap: () {
-                          Navigator.pop(context);
-                        }
-                      ),
+                  text: "Change Profile Image",
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
               ],
-    )))));
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
