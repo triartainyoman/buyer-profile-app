@@ -6,10 +6,8 @@ import 'package:buyer_profile_app/widgets/custom_button.dart';
 import 'package:buyer_profile_app/widgets/custom_list_tile.dart';
 import 'package:buyer_profile_app/widgets/profile_widget.dart';
 import 'package:buyer_profile_app/screens/notification_screen.dart';
-import 'package:buyer_profile_app/screens/change_profile_image_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:buyer_profile_app/constants.dart';
-
 
 class ProfileScreen extends StatefulWidget {
   static String id = 'profile_screen';
