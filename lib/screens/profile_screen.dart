@@ -1,12 +1,15 @@
 import 'package:buyer_profile_app/screens/change_password_screen.dart';
+import 'package:buyer_profile_app/screens/change_profile_image_screen.dart';
 import 'package:buyer_profile_app/screens/login_screen.dart';
 import 'package:buyer_profile_app/screens/edit_profile_screen.dart';
 import 'package:buyer_profile_app/widgets/custom_button.dart';
 import 'package:buyer_profile_app/widgets/custom_list_tile.dart';
 import 'package:buyer_profile_app/widgets/profile_widget.dart';
 import 'package:buyer_profile_app/screens/notification_screen.dart';
+import 'package:buyer_profile_app/screens/change_profile_image_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:buyer_profile_app/constants.dart';
+
 
 class ProfileScreen extends StatefulWidget {
   static String id = 'profile_screen';
@@ -35,7 +38,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 SizedBox(height: 35.0),
                 ProfileWidget(
                   imagePath: 'https://www.w3schools.com/howto/img_avatar.png',
-                  onClicked: () {},
+                  onClicked: () {
+                    Navigator.pushNamed(context, ChangeProfileImageScreen.id);
+                  },
                   width: 130.0,
                   height: 130.0,
                 ),
