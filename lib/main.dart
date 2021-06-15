@@ -9,6 +9,7 @@ import 'package:buyer_profile_app/screens/notification_screen.dart';
 import 'package:buyer_profile_app/screens/profile_screen.dart';
 import 'package:buyer_profile_app/screens/search_screen.dart';
 import 'package:buyer_profile_app/screens/sign_up_screen.dart';
+import 'package:buyer_profile_app/screens/change_profile_image_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         ChangePasswordScreen.id: (context) => ChangePasswordScreen(),
         EditProfileScreen.id: (context) => EditProfileScreen(),
         NotificationScreen.id: (context) => NotificationScreen(),
+        ChangeProfileImageScreen.id: (context) => ChangeProfileImageScreen(),
       },
     );
   }
