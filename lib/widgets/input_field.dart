@@ -6,14 +6,12 @@ class InputField extends StatelessWidget {
     @required this.obscureText,
     this.inputType,
     this.controller,
-    this.initialValue,
-    this.onChange,
+    this.validator,
   });
   final bool obscureText;
   final TextInputType inputType;
   final TextEditingController controller;
-  final String initialValue;
-  final Function onChange;
+  final Function validator;
 
   @override
   Widget build(BuildContext context) {
@@ -24,16 +22,16 @@ class InputField extends StatelessWidget {
         borderRadius: BorderRadius.circular(6.0),
       ),
       child: TextFormField(
-        initialValue: initialValue,
+        controller: controller,
         keyboardType: inputType,
         obscureText: obscureText,
-        onChanged: onChange,
         decoration: InputDecoration(
           border: InputBorder.none,
           contentPadding: EdgeInsets.symmetric(
             horizontal: 18.0,
           ),
         ),
+        validator: validator,
         style: kInputTextStyle,
       ),
     );
