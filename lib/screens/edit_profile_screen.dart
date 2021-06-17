@@ -62,17 +62,23 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     super.initState();
   }
 
-  Map userHeader = {
-    "Content-type": "application/json",
-    "Accept": "application/json"
-  };
-  final String url = 'http://10.0.2.2:8000/api/users/1';
+  @override
+  void dispose() {
+    controllerName.clear();
+    controllerUsername.clear();
+    controllerPhoneNumber.clear();
+    controllerEmail.clear();
+    super.dispose();
+  }
+
+  final String url = 'http://192.168.0.133/pemweb/furniture_api/editdata.php';
   void editData() {
     try {
-      http.put(Uri.parse(url), body: {
+      http.post(Uri.parse(url), body: {
         "id": widget.data['id'],
         "name": controllerName.text,
         "username": controllerUsername.text,
+        "gender": selectedGender,
         "phone_number": controllerPhoneNumber.text,
         "email": controllerEmail.text,
       }).then((value) {
@@ -209,7 +215,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                             text: "Save Changes",
                             onTap: () {
                               if (_formKey.currentState.validate()) {
-                                // editData();
+                                editData();
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -218,7 +224,11 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                                     },
                                   ),
                                 );
-                                // Navigator.pop(context);
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text("Profile Data Updated"),
+                                  ),
+                                );
                               }
                             }),
                         SizedBox(height: 48.0),

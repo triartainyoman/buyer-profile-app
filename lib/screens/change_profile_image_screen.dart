@@ -27,10 +27,16 @@ class _ChangeProfileImageScreenState extends State<ChangeProfileImageScreen> {
     super.initState();
   }
 
-  final String url = 'http://10.0.2.2:8000/api/users/1';
+  @override
+  void dispose() {
+    controllerImageURL.clear();
+    super.dispose();
+  }
+
+  final String url = 'http://192.168.0.133/pemweb/furniture_api/editimage.php';
   void editImageURL() {
     try {
-      http.put(
+      http.post(
         Uri.parse(url),
         body: {
           "id": widget.data['id'],
@@ -124,13 +130,13 @@ class _ChangeProfileImageScreenState extends State<ChangeProfileImageScreen> {
                       ),
                       maxLines: 8,
                       style: kInputTextStyle,
-                      // validator: (value) {
-                      //   if (value == null || value.isEmpty) {
-                      //     return "Profile image link cannot be empty";
-                      //   } else {
-                      //     return null;
-                      //   }
-                      // },
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "Profile image link cannot be empty";
+                        } else {
+                          return null;
+                        }
+                      },
                     ),
                   ),
                   SizedBox(height: 60.0),
@@ -149,7 +155,7 @@ class _ChangeProfileImageScreenState extends State<ChangeProfileImageScreen> {
                         );
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            content: Text("Data berhasil diubah"),
+                            content: Text("Profile Image Updated"),
                           ),
                         );
                       }

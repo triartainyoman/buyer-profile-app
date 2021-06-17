@@ -21,7 +21,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  final String url = 'http://10.0.2.2:8000/api/users/1';
+  final String url = 'http://192.168.0.133/pemweb/furniture_api/ambildata.php';
   Future getData() async {
     try {
       var data = await http.get(Uri.parse(url));
@@ -59,7 +59,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       SizedBox(height: 35.0),
                       ProfileWidget(
-                        imagePath: snapshot.data['data']['image_url'],
+                        imagePath: snapshot.data[0]['image_url'],
                         onClicked: () {
                           // Navigator.pushNamed(
                           //   context,
@@ -71,7 +71,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Navigator.push(context, MaterialPageRoute(
                               builder: (BuildContext context) {
                             return ChangeProfileImageScreen(
-                              data: snapshot.data['data'],
+                              data: snapshot.data[0],
                             );
                           }));
                         },
@@ -81,7 +81,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       SizedBox(height: 33.0),
                       Center(
                         child: Text(
-                          snapshot.data['data']['name'],
+                          snapshot.data[0]['name'],
                           style: kMenuTextStyle,
                         ),
                       ),
@@ -101,7 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Navigator.push(context, MaterialPageRoute(
                               builder: (BuildContext context) {
                             return EditProfileScreen(
-                              data: snapshot.data['data'],
+                              data: snapshot.data[0],
                             );
                           }));
                         },
@@ -128,7 +128,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         image: 'assets/icons/icon_lock.png',
                         text: "Change Password",
                         onTap: () {
-                          Navigator.pushNamed(context, ChangePasswordScreen.id);
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (BuildContext context) {
+                            return ChangePasswordScreen(
+                              data: snapshot.data[0],
+                            );
+                          }));
                         },
                       ),
                       SizedBox(height: 58.0),
